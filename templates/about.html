@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="utf-8">
+    <title>Macronutrient Status Estimator</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='plant.ico') }}">
+    <link rel="stylesheet" href="static/style2.css">
+    <nav>
+        <a href="/">Home</a>
+        <a id="now" href="">About</a>
+    </nav>   
+</head>
+
+<body>
+      <div class ="head">
+        <h2>About Current System</h2>
+      </div>
+      <div class="ex1">
+        <p class="about">
+            In the recent years, plant physiologists, biotechnologists, and eco-physiologists 
+            have been working to investigate various other blind features of the primary and 
+            secondary macronutrients and their future prospective, because macronutrients are 
+            involved in every step of plant life. As every macronutrient has its own character, 
+            therefore they are involved in different metabolic processes of plant life. 
+            The pH is measured by means of 1:2.5 H2O method, the organic carbon is measured in 
+            percentage by Walkley-Black method and the electrical conductivity measured in Deci 
+            Siemens per metre (dS/m). All of the macronutrients (N, P, K, S) are measured in Kg/Ha 
+            while the remaining micronutrients (Zn, Fe, Cu, Mn, B) are measured in parts per million 
+            (ppm). Determining the level of each macronutrient in soil is necessary to maintain and 
+            enhance its productivity, avoid soil degradation problems, improve fertilizers and 
+            overcome environmental damages. Thus, the necessity of developing an effective nutrient 
+            management arises by means of an adequate soil analysis and a proper application of 
+            fertilizers. Classification of soil parameters such as the fertility indices for 
+            macronutrients (Nitrogen, Potassium, Phosphorus), soil pH, soil type, preferred crop is 
+            relevant for fertilizer recommendation.
+            <br><br>
+            This system aims to classify the fertility levels of primary macro-nutrients of soil i.e., Nitrogen, 
+            Potassium and Phosphorus based on the soil test report values. The classification 
+            and prediction of the fertility levels of these macro-nutrients aids in recommending 
+            a suitable amount of fertilizer, thus saving the time of specialized technicians in 
+            developing expensive chemical analysis.</p>
+      </div>
+      
+    <div id="footer"><p>Website designed and developed by Shasank Dixit, Jyotirmoy Das, Muskan Sharma of  Dept. of Computer Science, A. C. College under the guidance of Mr. Gouravmoy Banerjee 
+        Dept. of  Computer Science, A.C. College, Jalpaiguri.</p>
+    </div>  
+    <script>
+        let id = document.getElementById("now");
+        id.classList.add("active")
+    </script>
+</body>
+</html>

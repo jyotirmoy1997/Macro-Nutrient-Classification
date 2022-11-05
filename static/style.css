@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+nav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  nav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  nav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  nav a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+body{
+    font-family: baloo;
+    background-image: url(img3.jpg);
+    overflow-x: hidden;
+}
+
+.ex1{
+  background-color:whitesmoke;
+  width: 95%;
+  height: 650px;
+  border-radius: 10px;
+  opacity: 80%;
+  margin: 0 auto;
+}
+input{
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+input[type=text]:focus {
+  background-color: rgb(96, 190, 101);
+}
+
+.head h2{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding-top: 3%;
+    
+}
+
+
+#footer {
+  /* position: fixed; */
+  padding: 10px 10px 0px 10px;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background: #333;
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+  padding-top: 1%;
+}
+
+
+.abc{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 90%;
+  margin: 2em auto;
+  padding-top: 2em;
+}
+
+.abc .el{
+  display: flex;
+  justify-content: space-evenly;
+}
+.abc .el label{
+  padding: 0.5em;
+}
+
+.row{
+  display: grid;
+  width: 95%;
+  margin: 2em auto;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 40px;
+}
+
+.cd{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cd button{
+  height: 60px;
+  width: 150px;
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+}
+
+.cd button:hover{
+  background-color: rgb(96, 190, 101);
+  color: black;
+}
+
+.res-wrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  font-size: 25px;
+}
+
+@media (max-width: 600px){
+  .abc{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: 2em auto;
+    padding-top: 2em;
+  }
+  
+  .abc .el{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .abc .el label{
+    padding: 0.5em;
+  }
+  
+  .row{
+    display: grid;
+    width: 95%;
+    margin: 2em auto;
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+  }
+  .ex1{
+    height: 1300px;
+  }
+  #footer{
+    height: 80px;
+    /* overflow-x: hidden; */
+  }
+  #footer p{
+    width: 98%;
+  }
+}

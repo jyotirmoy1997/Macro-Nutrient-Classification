@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="utf-8">
+    <title>Macronutrient Status Estimator</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='plant.ico') }}">
+    <link rel="stylesheet" href="static/style.css">
+    <nav>
+        <a id="now" href="/">Home</a>
+        <a href="about.html">About</a>
+    </nav> 
+         
+</head>
+
+<body>
+      <div class ="head">
+        <h2>Macronutrient Status Estimator</h2>
+      </div>
+
+      <div class=ex1>
+       
+        <form class="form" name=form1 action="{{ url_for("root")}}" method="POST">
+            <div class="abc">
+                <label for="Choise">Select a macronutrient</label>
+                
+                <div class="el">
+                    <label for="Choise">Nitrogen(N)</label>
+                    <input type="checkbox" id="B" name="ckb" value="1" onclick="chkcontrol(0);EnableDisableB(this);" />
+                </div>
+                
+                <div class="el">
+                    <label for="Ck">Potassium(K)</label>
+                    <input type="checkbox" id="C" name="ckb" value="2"  onclick="chkcontrol(1);EnableDisableC(this);" />
+                </div>
+                
+                <div class="el">
+                    <label for="Cl">Phosphorus(P)</label>
+                    <input type="checkbox" id="D" name="ckb" value="3" onclick="chkcontrol(2);EnableDisableD(this);" />
+                </div>
+                
+            </div>
+            
+            <div class="row">
+                <label for="Tmax" >PH(0 to 14):</label>
+                <input type="text" id="temp1" name="pH" required >
+            
+            
+                <label for="Tmin" >ELECTRIC CONDUCTIVITY(dS/m):</label>
+                <input type="text" id="temp2" name="EC" required >
+            
+                <label for="wss">ORGANIC CARBON(%):</label>
+                <input type="text" name="OC" id="ws" required>
+
+                <label for="rss" id="Nt">NITROGEN(Kg/Ha):</label>
+                <input type="text" name="N" id="rs" disabled="disabled" required>
+            
+                <label for="rh" >PHOSPHORUS(Kg/Ha):</label>
+                <input type="text" id="rh"  name="P" disabled="disabled" required>
+                
+                <label for="duke">POTASSIUM(Kg/Ha):</label>
+                <input type="text"  name="K" id="duke" disabled="disabled" required>
+
+                <label for="rhh">SULPHUR(Kg/Ha):</label>
+                <input type="text" name="S" id="S" required>
+                
+                <label for="rhh" id="Zn1">ZINC(ppm):</label>
+                <input type="text" name="Zn" id="Zn" required>
+                
+                <label for="rhh">IRON(ppm):</label>
+                <input type="text" name="Fe" id="Fe" required>
+
+                <label for="rhh">COPPER(ppm):</label>
+                <input type="text" name="Cu" id="Cu" required>
+                
+                <label for="rhh">MANGANESE(ppm):</label>
+                <input type="text" name="Mn" id="Mn" required>
+                
+                <label for="rhh">BORON(ppm):</label>
+                <input type="text"  name="B" id="B" required>
+            </div>
+
+            <div class="cd">
+                <button id="sub" type="submit">CLICK TO SEE</button>
+            </div>
+            <!-- <div class="res-wrap">
+                <div id = "res_out">Macronutrient Level: {{val}}</div>
+            </div> -->
+        </form>
+
+      </div>
+      <div id="footer"><p>Website designed and developed by Shasank Dixit, Jyotirmoy Das, Muskan Sharma of  Dept. of Computer Science, A. C. College under the guidance of Mr. Gouravmoy Banerjee 
+        Dept. of  Computer Science, A.C. College, Jalpaiguri.</p>
+    </div>  
+
+    <script type="text/javascript">
+        function EnableDisableB(B) {
+            var potash = document.getElementById("duke");
+            var PP = document.getElementById("rh");
+            potash.disabled = B.checked ? false : true;
+            PP.disabled = B.checked ? false : true;
+            if (potash.disabled == false && pp.disabled == false) {
+                potash.focus();
+                pp.focus();
+            }
+            
+        }
+        function EnableDisableC(C) {
+            var nitro = document.getElementById("rs");
+            var PP = document.getElementById("rh");
+            nitro.disabled = C.checked ? false : true;
+            PP.disabled = C.checked ? false : true;
+            if (nitro.disabled == false && pp.disabled == false) {
+                nitro.focus();
+                pp.focus();
+            }
+        }
+        
+        function EnableDisableD(D) {
+            var potash = document.getElementById("duke");
+            var nitro= document.getElementById("rs");
+            potash.disabled = D.checked ? false : true;
+            nitro.disabled = D.checked ? false : true;
+            if (potash.disabled == false && nitro.disabled == false) {
+                potash.focus();
+                nitro.focus();
+                
+            }
+        }
+        function chkcontrol(j) {
+            var total=0;
+            for(var i=0; i < document.form1.ckb.length; i++){
+                if(document.form1.ckb[i].checked){
+                total =total +1;
+            }
+        
+            if(total > 1){
+            alert("Please select only one") 
+            document.form1.ckb[j].checked = false ;
+            return false
+            }
+            }
+        }
+        
+        let id = document.getElementById("now");
+        id.classList.add("active")
+        
+
+    </script>
+</body>
+</html>
