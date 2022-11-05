@@ -1,7 +1,6 @@
 # Macro-nutrient Classfication
 
-## A voting classifier based machine learning system that aims to classify different levels of macro-nutrient present in a soil sample
-depending upon the amount of some other parameters.
+## A voting classifier based machine learning system that aims to classify different levels of macro-nutrient present in a soil sample depending upon the amount of some other parameters.
 
 ### Other Paramets =>
 
