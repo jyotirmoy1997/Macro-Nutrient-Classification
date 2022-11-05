@@ -149,16 +149,19 @@ input[type=text]:focus {
     margin: 2em auto;
     grid-template-rows: repeat(12, 1fr);
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 40px;
+    grid-gap: 20px;
   }
   .ex1{
     height: 1300px;
   }
   #footer{
-    height: 80px;
+    height: 120px;
     /* overflow-x: hidden; */
   }
   #footer p{
     width: 98%;
   }
+  /* .item{
+    margin-bottom: 20px;
+  } */
 }
