@@ -1,4 +1,6 @@
-![](/public/banner.png)
+![](https://res.cloudinary.com/dst1eqcmo/image/upload/v1693297132/GitHub%20Readme/Macronutrient-project/banner_rg9fry.png)
+
+# Macro-nutrient Classification using Machine Learning
 
 ### A voting classifier based machine learning system that aims to classify different levels of macro-nutrient present in a soil sample depending upon the amount of some other parameters.
 
@@ -34,7 +36,7 @@
 
 * This classification helps recommend appropriate fertilizer amounts, saving time and expenses associated with detailed chemical analysis by specialized technicians.
 
-![](/public/mse.png)
+![](https://res.cloudinary.com/dst1eqcmo/image/upload/v1693297136/GitHub%20Readme/Macronutrient-project/mse_k9qp2e.png)
 
 
 ### Other Paramets =>
